@@ -22,6 +22,26 @@
   background-color: #ffd8cc;
 }
 
+.flex-box{
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    background: #cce5ff;
+    padding: 15px;
+    border : 2px solid #ccc;
+    height: 150px;
+}
+.item {
+    background: yellowgreen;
+    color: white;
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+    padding: 10px 0;
+}
+.stretch .item{
+    background: teal;
+}
 
 </style>
 </head>
@@ -42,5 +62,32 @@
   (รวม padding + border อยู่ใน 200px)
 </div>
 
+<h2>1) justify-content center</h2>
+<div class="flex-box" style="justify-content: center;">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+
+<h2>2) justify-content space-between</h2>
+<div class="flex-box" style="justify-content: space-between;">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+
+<h2>3) align-items center</h2>
+<div class="flex-box" style="align-items: center;">
+  <div class="item" style="height: 40px;">1</div>
+  <div class="item" style="height: 80px;">2</div>
+  <div class="item" style="height: 60px;">3</div>
+</div>
+
+<h2>4) align-items stretch</h2>
+<div class="flex-box stretch" style="align-items: stretch;">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
 </body>
 </html>
