@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop Practice</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #display { 
+            background-color: #000; color: #0f0; 
+            padding: 15px; border-radius: 8px; 
+            white-space: pre-wrap; line-height: 1.5;
+            font-family: monospace;
+        }
+        button { padding: 10px 20px; cursor: pointer; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h2>แบบฝึกหัดเรื่อง For Loop</h2>
+    <button onclick="runLoops()">Run Code</button>
+    <div id="display">กดปุ่มเพื่อดูผลลัพธ์</div>
+
+    <script>
+        function runLoops() {
+            let output = "";
+
+            let maxNumber = 15; 
+
+            output += "--- เช็คเลขคู่/คี่ ---\n";
+            for (let i = 0; i <= maxNumber; i++) {
+                let type = (i % 2 === 0) ? "(คู่)" : "(คี่)";
+                let line = `${i} ${type}\n`;
+                output += line;
+                console.log(line.trim());
+            }
+
+            output += "\n--- นับทีละ 2 ---\n";
+            for (let i = 0; i <= 10; i += 2) {
+                let line = `นับทีละ 2: ${i}\n`;
+                output += line;
+                console.log(line.trim());
+            }
+
+            output += "\n--- นับถอยหลัง ---\n";
+            for (let i = 10; i >= 0; i--) {
+                let line = `ถอยหลัง: ${i}\n`;
+                output += line;
+                console.log(line.trim());
+            }
+
+            document.getElementById("display").innerText = output;
+        }
+    </script>
+</body>
+</html>

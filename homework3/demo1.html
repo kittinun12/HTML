@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Grade Demo</title>
+</head>
+<body>
+
+    <h2>ระบบตรวจสอบเกรด</h2>
+    <div id="output" style="background-color: #1a1a1a; color: #fff; padding: 20px; border-radius: 5px; font-family: sans-serif; line-height: 1.6;">
+        </div>
+
+    <script>
+        let score = 88; 
+
+        let grade = "";
+        let result = "";
+
+
+        if (score >= 80) {
+            grade = "A";
+        } else if (score >= 70) {
+            grade = "B";
+        } else if (score >= 60) {
+            grade = "C";
+        } else if (score >= 50) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        if (score >= 50) {
+            result = "ผ่าน";
+        } else {
+            result = "ไม่ผ่าน";
+        }
+
+        let displayMessage = `
+            คะแนนที่ได้: ${score} <br>
+            เกรด: ${grade} <br>
+            ผลสอบ: ${result}
+        `;
+
+        document.getElementById("output").innerHTML = displayMessage;
+        console.log("คะแนน:", score);
+        console.log("เกรด:", grade);
+        console.log("ผลสอบ:", result);
+    </script>
+</body>
+</html>
