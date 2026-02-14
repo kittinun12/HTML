@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+</head>
+<body>
+    <h1>สมัคร</h1>
+    <p>ง่ายและเร็ว</p>
+    <hr>
+    <form action="https://example.com/submit" method="post">
+        <label for="name">ชื่อ:</label> <input type="text" id="name" name="name" required>
+        <label for="surname">นามสกุล:</label> <input type="text" id="surname" name="surname" required><br><br>
+
+        <label for="email">หมายเลขเบอร์โทรศัพท์มือถือหรืออีเมล:</label>
+        <input type="tel" id="email" name="email" required><br><br>
+
+        <label for="password">รหัสผ่านใหม่:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="birthdate">วันเกิด:</label>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <table>
+            <tr>
+                <th rowspan="2">เพศ:</th>
+                <td><label for="male">ชาย:</label> <input type="radio" id="male" name="gender" value="male" required></td>
+                <td><label for="female">หญิง:</label> <input type="radio" id="female" name="gender" value="female" required></td>
+            </tr>            
+        </table>
+        <hr>
+        <p>เมื่อคลิก สมัคร แสดงว่าคุณยอมรับข้อกำหนด นโยบายข้อมูล และ นโยบายคุกกี้ของเรา คุณอาจได้รับการแจ้งเตือนทาง SMS จากเรา และสมารถเลือกไม่รับได้ในภายหลัง</p>
+        <input type="submit" value="สมัคร">
+</body>
+</html>
